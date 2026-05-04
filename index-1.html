@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Estatística</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <!-- MENU -->
+    <div id="menu" class="tela">
+      <h1>Calculadora Estatística</h1>
+      <button onclick="irPara('dados')">Começar</button>
+      <footer>
+        <p>
+          <i>
+            Escrito por Jeferson e Iran
+          </i>
+        </p>
+      </footer>
+    </div>
+  
+  <!-- DADOS -->
+  <div id="dados" class="tela" style="display:none;">
+    <h2>Inserir Dados</h2>
+    <label>Título do Teste/Análise</label>
+    <input type="text" id="titulo_analise_teste">
+    <br><br>
+    <label>Nome do Analista</label>
+    <input type="text" id="nome_do_analista">
+    <br><br>
+    <label for="valor_ref">Valor de Referência</label>
+    <input type="number" id="valor_ref" placeholder="Digite o valor">
+    <br><br>
+    <label>Inserir Valores</label>
+    <input type="number" id="numero" placeholder="Digite um número">
+    
+    <button onclick="adicionarNumero()">Adicionar</button>
+    
+    <ul id="lista"></ul>
+    <button onclick="apagarValor()">Remover</button>
+    <button onclick="calcularTudo()">Calcular</button>
+    <button onclick="irPara('menu')">Voltar</button>
+  </div>
+  
+  <!-- RESULTADO -->
+  <div id="resultado" class="tela" style="display:none;">
+    <h2>Resultado</h2>
+    
+    <p id="resposta"></p>
+    
+    <button onclick="irPara('dados')">Voltar</button>
+    <button onclick="limparTudo()">Novo cálculo</button>
+    <button id="btnPDF">Gerar PDF</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+   
+  
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
